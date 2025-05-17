@@ -1,7 +1,6 @@
-from flask import Blueprint
-
-nonauth = Blueprint('nonauth', __name__)
+from blprntboilerplate import setup
+nonauth = setup("nonauth")
 
 @nonauth.route('/nat')
 def nonauthtest():
-    return "This is an example app"
+    return render_template

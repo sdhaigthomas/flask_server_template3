@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import sys
 from os import path
 
@@ -18,7 +18,7 @@ app = Flask(__name__, template_folder="../tmplts")
 
 @app.route('/')
 def index():
-    return "This is an example app"
+    return render_template("index.html")
 
 app.register_blueprint(nonauth)
 
